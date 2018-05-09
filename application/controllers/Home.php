@@ -8,6 +8,8 @@
 
 class Home extends CI_Controller {
     function index(){
-        $this->load->view('home');
+        $data = array();
+        $data['temp'] = 'site/home/index';
+        $this->load->view('site/layout', $data);
     }
 } 
