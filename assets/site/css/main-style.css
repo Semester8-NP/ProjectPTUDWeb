@@ -7,6 +7,7 @@ a:hover {
     text-decoration: none;
 }
 
+
 /*** navigation bar ***/
 
 .navbar {
@@ -20,8 +21,8 @@ a:hover {
     margin-left: 7px;
     width: auto;
     height: 35px;
+    padding-right: 7px;
 }
-
 
 
 /*** content ***/
@@ -69,7 +70,27 @@ a:hover {
 }
 
 .normal-product .normal-product-item {
-    padding: 2px;
+    padding: 10px 0px 0px 1px;
+}
+
+.catalog-title {
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+/* catalog */
+
+.catalog a {
+    height: 25px;
+    font-size: 15px;
+    color: #333333;
+    text-align: center;
+}
+
+.catalog a:hover {
+    color: #1995dc;
+    font-weight: bold;
 }
 
 
