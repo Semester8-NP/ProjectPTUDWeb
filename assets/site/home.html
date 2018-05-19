@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main-style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- navigation bar -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="home.html"><img src="img/LOGO.png" class="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Điện thoại</a></li>
+                        <li><a href="#">Máy tính bảng</a></li>
+                        <li><a href="#">Laptop</a></li>
+                        <li><a href="#">Phụ kiện</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nhập nội dung cần tìm">
+                        </div>
+                        <button type="submit" class="btn btn-default">Tìm kiếm</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tài khoản<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Đăng nhập</a></li>
+                                <li><a href="#">Quên mật khẩu</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- the end of navigation bar -->
+
+        <!-- content -->
+        <div class="container">
+            <!-- left -->
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 left">
+                <!-- search by price -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Tìm kiếm theo mức giá</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label class="control-label">
+                                                Giá từ:
+                                            </label>
+                                <select id="select1" class="form-control">
+                                                <option value="0">0</option>
+                                                <option value="500000">500.000 VNĐ</option>
+                                                <option value="1000000">1.000.000 VNĐ</option>
+                                                <option value="2000000">2.000.000 VNĐ</option>
+                                                <option value="3000000">3.000.000 VNĐ</option>
+                                                <option value="4000000">4.000.000 VNĐ</option>
+                                                <option value="5000000">5.000.000 VNĐ</option>
+                                            </select>
+                                <br>
+                                <label class="control-label">
+                                                    đến:
+                                            </label>
+                                <select id="select1" class="form-control">
+                                                <option value="1000000">1.000.000 VNĐ</option>
+                                                <option value="2000000">2.000.000 VNĐ</option>
+                                                <option value="3000000">3.000.000 VNĐ</option>
+                                                <option value="4000000">4.000.000 VNĐ</option>
+                                                <option value="5000000">5.000.000 VNĐ</option>
+                                                <option value="7000000">7.000.000 VNĐ</option>
+                                                <option value="10000000">10.000.000 VNĐ</option>
+                                            </select>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- the end of search by price -->
+
+                <!-- support online -->
+                <div class="panel panel-default">
+                    <div class="panel-heading"><strong>Hỗ trợ trực tuyến</strong></div>
+                    <div class="panel-body lineheight">
+                        <strong>Vương Gia Phú</strong> <br>
+                        <span class="glyphicon glyphicon-earphone"> 090.000.0000</span>
+                        <span class="glyphicon glyphicon-envelope"> email@gmail.com</span>
+
+                        <div class="dividerline"></div>
+
+                        <strong>Từ Vĩnh Nguyên</strong> <br>
+                        <span class="glyphicon glyphicon-earphone"> 090.000.0000</span>
+                        <span class="glyphicon glyphicon-envelope"> email@gmail.com</span>
+                    </div>
+                </div>
+                <!-- the end of support online -->
+
+                <!-- advertise -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a href="#" class="thumbnail">
+                            <img src="img/adv1.png" alt="advertise">
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a href="#" class="thumbnail">
+                            <img src="img/adv2.png" alt="advertise">
+                        </a>
+                    </div>
+                </div>
+                <!-- the end of advertise -->
+            </div>
+            <!-- the end of left -->
+
+            <!-- right -->
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <!-- advertise slide -->
+                <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                        <li data-target="#carousel-id" data-slide-to="2" class=""></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <img alt="First slide" src="img/slide1.png" class="slide-size">
+                        </div>
+                        <div class="item">
+                            <img alt="Second slide" src="img/slide2.png" class="slide-size">
+                        </div>
+                        <div class="item active">
+                            <img alt="Third slide" src="img/slide3.png" class="slide-size">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-id" data-slide="prev"></a>
+                    <a class="right carousel-control" href="#carousel-id" data-slide="next"></a>
+                </div>
+                <!-- the end of advertise slide -->
+
+                <!-- divider line -->
+                <div class="dividerline" style="margin: 15px; height: 2px;"></div>
+
+                <!-- promotion product -->
+                <div class="panel panel-default">
+                    <div class="panel-body promotion">
+                        <h4 class="col-md-12"><strong>HOT</strong></h4>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
+                            <a href="#" class="thumbnail">
+                                <img src="img/iphoneX.jpeg" alt="iphone">
+                                <div class="caption">
+                                    <h4>Tên sản phẩm</h4>
+                                    <p>Tên nhà sản xuất</p>
+                                    <strong>Giá</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
+                            <a href="#" class="thumbnail">
+                                <img src="img/iphoneX.jpeg" alt="iphone">
+                                <div class="caption">
+                                    <h4>Tên sản phẩm</h4>
+                                    <p>Tên nhà sản xuất</p>
+                                    <strong>Giá</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
+                            <a href="#" class="thumbnail">
+                                <img src="img/iphoneX.jpeg" alt="iphone">
+                                <div class="caption">
+                                    <h4>Tên sản phẩm</h4>
+                                    <p>Tên nhà sản xuất</p>
+                                    <strong>Giá</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
+                            <a href="#" class="thumbnail">
+                                <img src="img/iphoneX.jpeg" alt="iphone">
+                                <div class="caption">
+                                    <h4>Tên sản phẩm</h4>
+                                    <p>Tên nhà sản xuất</p>
+                                    <strong>Giá</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- the end of promotion product -->
+
+                <!-- product -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <a href="#">
+                            <h3 class="panel-title">
+                                <strong>Bán chạy nhất</strong>
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="panel-body normal-product">
+                        <!-- show all product -->
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
+                            <a href="#" class="thumbnail">
+                                <img src="img/iphoneX.jpeg" alt="iphone">
+                                <div class="caption">
+                                    <h4>Tên sản phẩm</h4>
+                                    <p>Tên nhà sản xuất</p>
+                                    <strong>Giá</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
+                            <a href="#" class="thumbnail">
+                                <img src="img/iphoneX.jpeg" alt="iphone">
+                                <div class="caption">
+                                    <h4>Tên sản phẩm</h4>
+                                    <p>Tên nhà sản xuất</p>
+                                    <strong>Giá</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
+                            <a href="#" class="thumbnail">
+                                <img src="img/iphoneX.jpeg" alt="iphone">
+                                <div class="caption">
+                                    <h4>Tên sản phẩm</h4>
+                                    <p>Tên nhà sản xuất</p>
+                                    <strong>Giá</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
+                            <a href="#" class="thumbnail">
+                                <img src="img/iphoneX.jpeg" alt="iphone">
+                                <div class="caption">
+                                    <h4>Tên sản phẩm</h4>
+                                    <p>Tên nhà sản xuất</p>
+                                    <strong>Giá</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- the end of product -->
+
+            </div>
+            <!-- the end of right -->
+
+        </div>
+        <!-- the end of content -->
+
+        <!-- footer -->
+        <footer>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p>Copyright &copy; 2018 NP Store <br> Project: Website for selling mobile devices. <br> Vương Gia Phú 14520688 <br> Từ Vĩnh Nguyên 14520615 </p>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

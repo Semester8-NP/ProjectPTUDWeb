@@ -1,222 +1,132 @@
-
-<!--/**-->
-<!-- * Created by PhpStorm.-->
-<!-- * User: nIddy-->
-<!-- * Date: 10/05/2018-->
-<!-- * Time: 1:36 CH-->
-<!-- */-->
-
-<article class="container">
-    <!-- slide banner -->
-    <section class="col-md-1"></section>
-    <section class="col-md-10 col-sm-12">
-        <div id="carousel-id" class="carousel slide slideheight" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-id" data-slide-to="0" class=""></li>
-                <li data-target="#carousel-id" data-slide-to="1" class=""></li>
-                <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item">
-                    <img alt="First slide" src="<?php echo assets_url()?>site/img/slide1.png" width="920px">
-
-                </div>
-                <div class="item">
-                    <img alt="Second slide" src="<?php echo assets_url()?>site/img/slide2.png" width="920px">
-
-                </div>
-                <div class="item active">
-                    <img alt="Third slide" src="<?php echo assets_url()?>site/img/slide3.png" width="920px">
-
-                </div>
+<!-- right -->
+<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+    <!-- advertise slide -->
+    <div id="carousel-id" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-id" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item">
+                <img alt="First slide" src="<?php echo assets_url('site/') ?>img/slide1.png" class="slide-size">
             </div>
-            <a class="left carousel-control" href="#carousel-id" data-slide="prev"></a>
-            <a class="right carousel-control" href="#carousel-id" data-slide="next"></a>
+            <div class="item">
+                <img alt="Second slide" src="<?php echo assets_url('site/') ?>img/slide2.png" class="slide-size">
+            </div>
+            <div class="item active">
+                <img alt="Third slide" src="<?php echo assets_url('site/') ?>img/slide3.png" class="slide-size">
+            </div>
         </div>
-    </section>
-    <section class="col-md-1"></section>
-    <!-- end slide banner -->
+        <a class="left carousel-control" href="#carousel-id" data-slide="prev"></a>
+        <a class="right carousel-control" href="#carousel-id" data-slide="next"></a>
+    </div>
+    <!-- the end of advertise slide -->
+
+    <!-- divider line -->
+    <div class="dividerline" style="margin: 15px; height: 2px;"></div>
+
+    <!-- promotion product -->
+    <div class="panel panel-default">
+        <div class="panel-body promotion">
+            <h4 class="col-md-12"><strong>HOT</strong></h4>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
+                <a href="#" class="thumbnail">
+                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <div class="caption">
+                        <h4>Tên sản phẩm</h4>
+                        <p>Tên nhà sản xuất</p>
+                        <strong>Giá</strong>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
+                <a href="#" class="thumbnail">
+                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <div class="caption">
+                        <h4>Tên sản phẩm</h4>
+                        <p>Tên nhà sản xuất</p>
+                        <strong>Giá</strong>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
+                <a href="#" class="thumbnail">
+                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <div class="caption">
+                        <h4>Tên sản phẩm</h4>
+                        <p>Tên nhà sản xuất</p>
+                        <strong>Giá</strong>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
+                <a href="#" class="thumbnail">
+                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <div class="caption">
+                        <h4>Tên sản phẩm</h4>
+                        <p>Tên nhà sản xuất</p>
+                        <strong>Giá</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- the end of promotion product -->
 
     <!-- product -->
-    <section class="col-md-12 col-sm-12">
-        <div class="panel panel-default margintop10">
-            <div class="panel-heading">
-                <a href="#"><h4>Các sản phẩm bán chạy nhất</h4></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <a href="#">
+                <h3 class="panel-title">
+                    <strong>Bán chạy nhất</strong>
+                </h3>
+            </a>
+        </div>
+        <div class="panel-body normal-product">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
+                <a href="#" class="thumbnail">
+                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <div class="caption">
+                        <h4>Tên sản phẩm</h4>
+                        <p>Tên nhà sản xuất</p>
+                        <strong>Giá</strong>
+                    </div>
+                </a>
             </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
+                <a href="#" class="thumbnail">
+                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <div class="caption">
+                        <h4>Tên sản phẩm</h4>
+                        <p>Tên nhà sản xuất</p>
+                        <strong>Giá</strong>
                     </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
+                <a href="#" class="thumbnail">
+                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <div class="caption">
+                        <h4>Tên sản phẩm</h4>
+                        <p>Tên nhà sản xuất</p>
+                        <strong>Giá</strong>
                     </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
+                <a href="#" class="thumbnail">
+                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <div class="caption">
+                        <h4>Tên sản phẩm</h4>
+                        <p>Tên nhà sản xuất</p>
+                        <strong>Giá</strong>
                     </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- the end of product -->
 
-    <!-- product -->
-    <section class="col-md-12 col-sm-12">
-        <div class="panel panel-default margintop10">
-            <div class="panel-heading">
-                <a href="#"><h4>Các sản phẩm bán chạy nhất</h4></a>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- product -->
-    <section class="col-md-12 col-sm-12">
-        <div class="panel panel-default margintop10">
-            <div class="panel-heading">
-                <a href="#"><h4>Các sản phẩm bán chạy nhất</h4></a>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#" class="thumbnail">
-                            <img src="<?php echo assets_url()?>site/img/iphoneX.jpeg" alt="iphoneX">
-                            <div class="caption">
-                                <h4>iPhone X - 64GB</h4>
-                            </div>
-                            <div class="price">
-                                <strong>&nbsp;&nbsp;Giá: 100.000.000 VND</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-</article>
+</div>
+<!-- the end of right -->

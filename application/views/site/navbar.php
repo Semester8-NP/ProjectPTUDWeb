@@ -1,47 +1,44 @@
-<!--/**-->
-<!-- * Created by PhpStorm.-->
-<!-- * User: nIddy-->
-<!-- * Date: 09/05/2018-->
-<!-- * Time: 7:35 CH-->
-<!-- */-->
-
-<nav class="navbar navbar-default" role="navigation">
+<!-- navigation bar -->
+<nav class="navbar navbar-default">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!-- Home button -->
-            <a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-home"> Home</span></a>
+            <a href="home.html"><img src="<?php echo assets_url('site/') ?>img/LOGO.png" class="logo">&nbsp;</a>
         </div>
 
-        <!-- navigation links -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="index.php?xem=dienthoai">Điện thoại</a></li>
-                <li><a href="index.php?xem=maytinhbang">Máy tính bảng</a></li>
-                <li><a href="index.php?xem=laptop">Laptop</a></li>
-                <li><a href="index.php?xem=phukien">Phụ kiện</a></li>
+                <li><a href="#">Điện thoại</a></li>
+                <li><a href="#">Máy tính bảng</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Phụ kiện</a></li>
             </ul>
-            <!-- search box -->
             <form class="navbar-form navbar-left" role="search">
-                <div class="input-group stylish-input-group input-append">
-                    <input type="text" class="form-control"  placeholder="Search" >
-                    <span class="input-group-addon">
-                       		<button type="submit">
-                           		<span class="glyphicon glyphicon-search"></span>
-                       		</button>
-                   		</span>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
                 </div>
+                <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.php?xem=lienhe">Liên hệ</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tài khoản &nbsp;<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Đăng nhập</a></li>
+                        <li><a href="#">Quên mật khẩu</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">separated link</a></li>
+                    </ul>
+                </li>
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </div>
     </div>
 </nav>
+<!-- the end of navigation bar -->

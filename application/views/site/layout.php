@@ -4,12 +4,23 @@
     </head>
 
     <body>
-        <?php
-            $this->load->view('site/header');
-            $this->load->view('site/navbar');
-            $this->load->view($temp);
-            $this->load->view('site/footer');
-        ?>
+        <div class="wrapper">
+<!--            navigation bar-->
+            <?php
+                $this->load->view('site/navbar');
+            ?>
+<!--            content-->
+            <div class="container">
+                <?php
+                    $this->load->view('site/left');
+                    $this->load->view($temp);
+                ?>
+            </div>
+<!--            footer-->
+            <?php
+                $this->load->view('site/footer');
+            ?>
+        </div>
     </body>
 
 </html>

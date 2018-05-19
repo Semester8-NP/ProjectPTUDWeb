@@ -9,3 +9,10 @@ function assets_url($url = ''){
     return base_url('assets/'.$url);
 }
 
+function pre($list, $exit = true){
+    echo '<pre>';
+    print_r($list);
+    if(exit){
+        die();
+    }
+}
