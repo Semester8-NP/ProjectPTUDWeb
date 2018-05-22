@@ -66,12 +66,12 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <a href="#" class="thumbnail">
-                <img src="<?php echo assets_url('site/'); ?>img/adv1.png" alt="advertise">
+                <img src="<?php echo assets_url('site/'); ?>img/slide4.png" alt="advertise">
             </a>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <a href="#" class="thumbnail">
-                <img src="<?php echo assets_url('site/'); ?>img/adv2.png" alt="advertise">
+                <img src="<?php echo assets_url('site/'); ?>img/slide2.png" alt="advertise">
             </a>
         </div>
     </div>

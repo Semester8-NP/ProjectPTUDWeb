@@ -50,6 +50,7 @@ class Admin extends MY_Controller{
      * Thêm quản trị mới
      */
     function add(){
+        // load thư viện validate dữ liệu
         $this->load->library('form_validation');
         $this->load->helper('form');
 
@@ -71,7 +72,7 @@ class Admin extends MY_Controller{
                 $data = array(
                     'name' => $name,
                     'username' => $username,
-                    'password' => md5('$password')
+                    'password' => md5($password)
                 );
                 if($this->admin_model->create($data)){
                     // tạo thông báo
@@ -92,7 +93,7 @@ class Admin extends MY_Controller{
      */
     function edit(){
         // lấy id admin cần sửa
-        $id = $this->uri->rsegment('3');
+        $id = $this->uri->rsegment('3'); //id cần sửa ở phân đoạn 3 của link ".../admin/segment1/segment2/segment3"
         $id = intval($id);
 
         $this->load->library('form_validation');

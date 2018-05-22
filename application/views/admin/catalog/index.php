@@ -1,5 +1,5 @@
 <!--load file head.php-->
-<?php $this->load->view('admin/admin/head', $this->data); ?>
+<?php $this->load->view('admin/catalog/head', $this->data); ?>
 
 <div class="line"></div>
 
@@ -10,9 +10,9 @@
             <span class="titleIcon">
                 <input type="checkbox" id="titleCheck" name="titleCheck" />
             </span>
-            <h6>Danh sách admin</h6>
+            <h6>Danh sách danh mục sản phẩm</h6>
             <div class="num f12">
-                Tổng số: <b><?php echo $total; ?></b>
+                Tổng số: <b><?php echo count($list); ?></b>
             </div>
         </div>
 
@@ -21,8 +21,9 @@
             <tr>
                 <td style="width:10px;"><img src="<?php echo assets_url('admin/') ?>images/icons/tableArrows.png" /></td>
                 <td style="width:80px;">Mã số</td>
-                <td>Họ và tên</td>
-                <td>Username</td>
+                <td>Tên danh mục</td>
+                <td>mã số danh mục cha</td>
+                <td>Thứ tự hiển thị</td>
                 <td style="width:100px;">Hành động</td>
             </tr>
             </thead>
@@ -53,26 +54,26 @@
                         <?php echo $row->id; ?>
                     </td>
 
-
                     <td>
                         <span title="<?php echo $row->name; ?>" class="tipS">
 							<?php echo $row->name; ?>
                         </span>
                     </td>
 
+                    <td class="textC">
+                        <?php echo $row->parent_id; ?>
+                    </td>
 
-                    <td>
-                        <span title="<?php echo $row->username; ?>" class="tipS">
-							<?php echo $row->username; ?>
-                        </span>
+                    <td class="textC">
+                        <?php echo $row->sort_order; ?>
                     </td>
 
                     <td class="option">
-                        <a href="<?php echo admin_url('admin/edit/' .$row->id) ?>" title="Chỉnh sửa" class="tipS ">
+                        <a href="<?php echo admin_url('catalog/edit/' .$row->id) ?>" title="Chỉnh sửa" class="tipS ">
                             <img src="<?php echo assets_url('admin/') ?>images/icons/color/edit.png" />
                         </a>
 
-                        <a href="<?php echo admin_url('admin/delete/' .$row->id) ?>" title="Xóa" class="tipS verify_action" >
+                        <a href="<?php echo admin_url('catalog/delete/' .$row->id) ?>" title="Xóa" class="tipS verify_action" >
                             <img src="<?php echo assets_url('admin/') ?>images/icons/color/delete.png" />
                         </a>
                     </td>
