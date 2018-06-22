@@ -8,15 +8,32 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="home.html"><img src="<?php echo assets_url('site/') ?>img/LOGO.png" class="logo">&nbsp;</a>
+            <a href="<?php echo base_url(); ?>"><img src="<?php echo assets_url('site/') ?>img/LOGO.png" class="logo">&nbsp;</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Điện thoại</a></li>
-                <li><a href="#">Máy tính bảng</a></li>
-                <li><a href="#">Laptop</a></li>
-                <li><a href="#">Phụ kiện</a></li>
+                <?php if (is_array($catalog_list)): ?>
+                <?php foreach ($catalog_list as $row): ?>
+                    <li class="dropdown">
+                        <a href="<?php echo base_url('product/catalog/'.$row->id)?>" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <?php echo $row->name ?>
+                        </a>
+                        <?php if (!empty($row->sub)): ?>
+                        <!-- Lấy danh sách danh mục con -->
+                        <ul class="dropdown-menu" role="menu">
+                            <?php foreach ($row->sub as $sub): ?>
+                            <li>
+                                <a href="<?php echo base_url('product/catalog/'.$sub->id)?>">
+                                    <?php echo $sub->name; ?>
+                                </a>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <?php endif; ?>
+                    </li>
+                <?php endforeach; ?>
+                <?php endif; ?>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">

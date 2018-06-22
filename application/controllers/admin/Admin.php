@@ -25,7 +25,9 @@ class Admin extends MY_Controller{
 
         // lấy nội dung biến message
         $message = $this->session->flashdata('message');
+        $F_message = $this->session->flashdata('F_message');
         $this->data['message'] = $message;
+        $this->data['F_message'] = $F_message;
 
         $this->data['temp'] = 'admin/admin/index';
         $this->load->view('admin/main', $this->data);
@@ -78,7 +80,7 @@ class Admin extends MY_Controller{
                     // tạo thông báo
                     $this->session->set_flashdata('message', 'Thêm admin mới thành công');
                 }else{
-                    $this->session->set_flashdata('message', 'Thêm admin không thành công');
+                    $this->session->set_flashdata('F_message', 'Thêm admin không thành công');
                 }
                 redirect(admin_url('admin '));
             }
@@ -102,7 +104,7 @@ class Admin extends MY_Controller{
         // lấy thông tin admin cần sửa
         $info = $this->admin_model->get_info($id);
         if (!$info){
-            $this->session->set_flashdata('message', 'admin không tồn tại');
+            $this->session->set_flashdata('F_message', 'admin không tồn tại');
             redirect(admin_url('admin'));
         }
         $this->data['info'] = $info;
@@ -136,7 +138,7 @@ class Admin extends MY_Controller{
                     // tạo thông báo
                     $this->session->set_flashdata('message', 'Cập nhật thông tin thành công');
                 }else{
-                    $this->session->set_flashdata('message', 'Cập nhật thông tin không thành công');
+                    $this->session->set_flashdata('F_message', 'Cập nhật thông tin không thành công');
                 }
                 redirect(admin_url('admin'));
             }
@@ -157,7 +159,7 @@ class Admin extends MY_Controller{
         // lấy thông tin admin cần sửa
         $info = $this->admin_model->get_info($id);
         if (!$info){
-            $this->session->set_flashdata('message', 'admin không tồn tại');
+            $this->session->set_flashdata('F_message', 'admin không tồn tại');
             redirect(admin_url('admin'));
         }
 

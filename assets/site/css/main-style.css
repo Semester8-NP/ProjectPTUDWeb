@@ -6,6 +6,9 @@
 a:hover {
     text-decoration: none;
 }
+a:visited{
+    text-decoration: none;
+}
 
 
 /*** navigation bar ***/
@@ -27,6 +30,13 @@ a:hover {
 
 /*** content ***/
 
+a caption{
+    color: #000000;
+}
+
+a:hover caption{
+    color: #1995dc;
+}
 
 /* left */
 

@@ -27,6 +27,18 @@ Class MY_Controller extends CI_Controller{
             default :
                 {
                     // xử lí ở trang ngoài
+                    // lấy danh sách danh mục sản phẩm
+                    $this->load->model('catalog_model');
+                    $input = array();
+                    $input['where'] = array('parent_id' => 0);
+                    $input['order'] = array('id','ASC');
+                    $catalog_list = $this->catalog_model->get_list($input);
+                    foreach ($catalog_list as $row){
+                        $input['where'] = array('parent_id' => $row->id);
+                        $sub = $this->catalog_model->get_list($input);
+                        $row->sub = $sub;
+                    }
+                    $this->data['catalog_list'] = $catalog_list;
 
                 }
         }

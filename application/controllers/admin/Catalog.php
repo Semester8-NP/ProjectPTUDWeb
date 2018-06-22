@@ -22,7 +22,9 @@ class Catalog extends MY_Controller{
 
         // lấy nội dung biến message
         $message = $this->session->flashdata('message');
+        $F_message = $this->session->flashdata('F_message');
         $this->data['message'] = $message;
+        $this->data['F_message'] = $F_message;
 
         // load view của catalog
         $this->data['temp'] = 'admin/catalog/index';
@@ -59,7 +61,7 @@ class Catalog extends MY_Controller{
                     // tạo thông báo
                     $this->session->set_flashdata('message', 'Thêm danh mục mới thành công');
                 }else{
-                    $this->session->set_flashdata('message', 'Thêm danh mục không thành công');
+                    $this->session->set_flashdata('F_message', 'Thêm danh mục không thành công');
                 }
                 redirect(admin_url('catalog'));
             }
@@ -85,7 +87,7 @@ class Catalog extends MY_Controller{
         if(!$info){
             // nếu không có id cần sửa, chuyển về trang danh sách
             // tạo thông báo
-            $this->session->set_flashdata('message', 'danh mục không tồn tại');
+            $this->session->set_flashdata('F_message', 'danh mục không tồn tại');
             redirect(admin_url('catalog'));
         }
         $this->data['info'] = $info;
@@ -117,7 +119,7 @@ class Catalog extends MY_Controller{
                     // tạo thông báo
                     $this->session->set_flashdata('message', 'Cập nhật danh mục thành công');
                 }else{
-                    $this->session->set_flashdata('message', 'Cập nhật danh mục không thành công');
+                    $this->session->set_flashdata('F_message', 'Cập nhật danh mục không thành công');
                 }
                 redirect(admin_url('catalog'));
             }
@@ -145,7 +147,16 @@ class Catalog extends MY_Controller{
         $info = $this->catalog_model->get_info($id);
         // kiểm tra thông tin cần xóa, nếu không có thì trả về trang danh sách
         if (!$info){
-            $this->session->set_flashdata('message', 'danh mục không tồn tại');
+            $this->session->set_flashdata('F_message', 'danh mục không tồn tại');
+            redirect(admin_url('catalog'));
+        }
+
+        // kiểm tra danh mục có sản phẩm không
+        $this->load->model('product_model');
+        $product = $this->product_model->get_info_rule(array('catalog_id' => $id), 'id');
+        if ($product){
+            // tạo thông báo
+            $this->session->set_flashdata('F_message', 'Bạn không thể xóa danh mục có chứa sản phẩm. Để xóa danh mục này bạn cần xóa tất cả sản phẩm thuộc danh mục sản phẩm này trước.');
             redirect(admin_url('catalog'));
         }
 

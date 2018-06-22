@@ -1,27 +1,9 @@
+
 <!-- right -->
 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-    <!-- advertise slide -->
-    <div id="carousel-id" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-id" data-slide-to="1" class=""></li>
-            <li data-target="#carousel-id" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="item">
-                <img alt="First slide" src="<?php echo assets_url('site/') ?>img/slide1.png" class="slide-size">
-            </div>
-            <div class="item">
-                <img alt="Second slide" src="<?php echo assets_url('site/') ?>img/slide2.png" class="slide-size">
-            </div>
-            <div class="item active">
-                <img alt="Third slide" src="<?php echo assets_url('site/') ?>img/slide3.png" class="slide-size">
-            </div>
-        </div>
-        <a class="left carousel-control" href="#carousel-id" data-slide="prev"></a>
-        <a class="right carousel-control" href="#carousel-id" data-slide="next"></a>
-    </div>
-    <!-- the end of advertise slide -->
+
+    <!-- slide-->
+    <?php $this->load->view('site/slide', $this->data); ?>
 
     <!-- divider line -->
     <div class="dividerline" style="margin: 15px; height: 2px;"></div>
@@ -29,47 +11,26 @@
     <!-- promotion product -->
     <div class="panel panel-default">
         <div class="panel-body promotion">
-            <h4 class="col-md-12"><strong>HOT</strong></h4>
+            <h4 class="col-md-12"><strong>Sản phẩm mới nhất</strong></h4>
+            <?php foreach ($product_newest as $row): ?>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
                 <a href="#" class="thumbnail">
-                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <img src="<?php echo base_url('upload/product/').$row->image_link ?>" alt="<?php echo $row->name?>">
                     <div class="caption">
-                        <h4>Tên sản phẩm</h4>
-                        <p>Tên nhà sản xuất</p>
-                        <strong>Giá</strong>
+                        <h4><?php echo $row->name?></h4>
+                        <strong> Giá:
+                            <?php if ($row->discount > 0): ?>
+                                <?php $new_price = $row->price - $row->discount; ?>
+                                <b style="color: #9a161a"><?php echo number_format($new_price); ?>VNĐ</b>
+                                <p style="text-decoration:line-through; margin-left: 30px;"><?php echo number_format($row->price) ?>VNĐ</p>
+                            <?php else: ?>
+                                <p style="color: #9a161a"><?php echo number_format($row->price) ?>VNĐ</p>
+                            <?php endif; ?>
+                        </strong>
                     </div>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
-                <a href="#" class="thumbnail">
-                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
-                    <div class="caption">
-                        <h4>Tên sản phẩm</h4>
-                        <p>Tên nhà sản xuất</p>
-                        <strong>Giá</strong>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
-                <a href="#" class="thumbnail">
-                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
-                    <div class="caption">
-                        <h4>Tên sản phẩm</h4>
-                        <p>Tên nhà sản xuất</p>
-                        <strong>Giá</strong>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 promotion-item">
-                <a href="#" class="thumbnail">
-                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
-                    <div class="caption">
-                        <h4>Tên sản phẩm</h4>
-                        <p>Tên nhà sản xuất</p>
-                        <strong>Giá</strong>
-                    </div>
-                </a>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <!-- the end of promotion product -->
@@ -79,51 +40,30 @@
         <div class="panel-heading">
             <a href="#">
                 <h3 class="panel-title">
-                    <strong>Bán chạy nhất</strong>
+                    <strong>Điện thoại</strong>
                 </h3>
             </a>
         </div>
         <div class="panel-body normal-product">
+            <?php foreach ($phone_list as $row): ?>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
                 <a href="#" class="thumbnail">
-                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
+                    <img src="<?php echo base_url('upload/product/').$row->image_link ?>" alt="<?php echo $row->name?>">
                     <div class="caption">
-                        <h4>Tên sản phẩm</h4>
-                        <p>Tên nhà sản xuất</p>
-                        <strong>Giá</strong>
+                        <h4><?php echo $row->name?></h4>
+                        <strong> Giá:
+                            <?php if ($row->discount > 0): ?>
+                                <?php $new_price = $row->price - $row->discount; ?>
+                                <b style="color: #9a161a"><?php echo number_format($new_price); ?>VNĐ</b>
+                                <p style="text-decoration:line-through; margin-left: 30px;"><?php echo number_format($row->price) ?>VNĐ</p>
+                            <?php else: ?>
+                                <p style="color: #9a161a"><?php echo number_format($row->price) ?>VNĐ</p>
+                            <?php endif; ?>
+                        </strong>
                     </div>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
-                <a href="#" class="thumbnail">
-                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
-                    <div class="caption">
-                        <h4>Tên sản phẩm</h4>
-                        <p>Tên nhà sản xuất</p>
-                        <strong>Giá</strong>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
-                <a href="#" class="thumbnail">
-                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
-                    <div class="caption">
-                        <h4>Tên sản phẩm</h4>
-                        <p>Tên nhà sản xuất</p>
-                        <strong>Giá</strong>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 normal-product-item">
-                <a href="#" class="thumbnail">
-                    <img src="<?php echo assets_url('site/') ?>img/iphoneX.jpeg" alt="iphone">
-                    <div class="caption">
-                        <h4>Tên sản phẩm</h4>
-                        <p>Tên nhà sản xuất</p>
-                        <strong>Giá</strong>
-                    </div>
-                </a>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <!-- the end of product -->
