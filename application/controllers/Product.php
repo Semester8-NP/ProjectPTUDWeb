@@ -43,7 +43,6 @@ class Product extends MY_Controller{
                 }
                 //lay tat ca san pham thuoc cac danh mục con do
                 $this->db->where_in('catalog_id', $catalog_subs_id);
-
             }else{
                 $input['where'] = array('catalog_id' => $id);
             }
@@ -61,7 +60,7 @@ class Product extends MY_Controller{
         $config = array();
         $config['total_rows']   = $total_rows;                          // tổng tất cả các sản phẩm trên website
         $config['base_url']     = base_url('product/catalog/'.$id); // link hiển thị danh sách sản phẩm
-        $config['per_page']     = 16;                                    // số lượng sản phẩm hiển thị trong 1 trang
+        $config['per_page']     = 12;                                    // số lượng sản phẩm hiển thị trong 1 trang
         $config['uri_segment']  = 4;                                    // phân đoạn hiển thị số trang trên url
         $config['last_link']    = 'Cuối';
         $config['next_link']    = '>>';
@@ -88,6 +87,21 @@ class Product extends MY_Controller{
      * Xem chi tiết sản phẩm
      */
     function view(){
+        // lấy id sản phẩm muốn xem
+        $id = intval($this->uri->rsegment(3));
+        $product = $this->product_model->get_info($id);
 
+        if (!$product){
+            redirect();
+        }
+        $this->data['product'] = $product;
+
+        // lấy thông tin danh mục sản phẩm
+        $catalog = $this->catalog_model->get_info($product->catalog_id);
+        $this->data['catalog'] = $catalog;
+
+        // hiển thị ra view
+        $this->data['temp'] = 'site/product/view';
+        $this->load->view('site/layout', $this->data);
     }
 }

@@ -38,6 +38,20 @@ a:hover caption{
     color: #1995dc;
 }
 
+/* Price and discount */
+.price{
+    font-size: x-large;
+    color: #FF0000;
+}
+
+.old_price{
+    font-size: small;
+    text-decoration:line-through;
+    margin-left: 30px;
+    color: #797979;
+}
+
+
 /* left */
 
 .dividerline {
